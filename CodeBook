@@ -1,0 +1,20 @@
+1. The 561 columns in X_train.txt and X_test.txt are the 561 features measurements decribed in features.txt. 
+2. The subject ID for train and test data sets are given in corresponding subject_*.txt. 30 subjects in total. 
+- 21 subjects (70%) in training data set
+ID: 1  3  5  6  7  8 11 14 15 16 17 19 21 22 23 25 26 27 28 29 30
+- 9 subjects (30%) in test data set
+ID:  2  4  9 10 12 13 18 20 24
+3. Activity numberic codes are given in y_*.txt with * corresponding to train and test for the two sets. Code description is in activity_lables.txt.
+4. trainf and testf are two dataframes with subjects, activity and 561 feature measurements combined for train and test respectively. 
+5. OneDataSet is the joined trainf and testf data frame for task 1. 
+6. ExtractedDataSet is the dataframe extracted from the complete data set with features containing mean() and std() in their names. 
+7. ActLabelledDataSet is the dataframe with descriptions given to each activity code. 
+8. TriaxialSignalDataSet is the dataframe that contains the tri-axial mean measurements of the three signal categories 
+- Triaxial total acceleration from the accelerometer: tBodyAcc-[XYZ] 
+- Triaxial Angular velocity from the gyroscope: tBodyGyro-[XYZ] 
+- Triaxial total Gravity: tGravity-[XYZ] 
+Note that there are multiple features for some categories, eg., tBodyAccJerk, tBodyGyroJerk. Therefore, there are 15 features included in the selection criterion instead of 9. 
+9. a the the molten dataframe with each feature in TriaxialSignalDataSet became a row. The feature was identified by the "signal" column in a.
+10. b is the dataframe casted from a by aggregation the measurments to the nine desired signal categories: 
+(X, Y, Z)*(tBodyAcc, tBodyGyro, tGravity). 
+11. fdata.txt is the final tidy dataset lists the nine triaxial signals for each activity and each subject, ordered by subject ID. 
